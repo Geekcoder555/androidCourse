@@ -12,4 +12,7 @@ https://www.udemy.com/the-complete-android-developer-course/learn/#/
   <li><h4>Guess the Celebrity</h4></li>
     <p>Sort of a quiz App in which the player names the celebrity on the Image.</p>
     <p>Involved some more advanced topics such as fetching data from a website to populate the Lists with the names and images of the Celebrities and handling exceptions.</p>
+    <li><h4>HackerNews Reader</h4></li>
+      <p>Using the <a href="https://github.com/HackerNews/API" target="_blank">HackerNews API</a> this App shows a list of the 20 top stories of the moment, and when the user clicks on the list item, is taken to another Activity with a WebView that displays the Article, as if the user had just opened a Browser.</p>
+      <p>Good practice for JSON, Databases and WebViews.</p>
 </ul>
