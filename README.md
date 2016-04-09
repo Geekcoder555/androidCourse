@@ -16,7 +16,7 @@ https://www.udemy.com/the-complete-android-developer-course/learn/#/
     <p>Using the <a href="https://github.com/HackerNews/API" target="_blank">HackerNews API</a> this App shows a list of the 20 top stories of the moment, and when the user clicks on the list item, is taken to another Activity with a WebView that displays the Article, as if the user had just opened a Browser.</p>
     <p>Good practice for JSON, Databases and WebViews.</p>
   <li><h4>Whats the Weather</h4></li>
-    <p>This app uses the <a href="http://openweathermap.org/api">Open Weather Map API</a> to fetch the weather information of a city entered by the user and displays the description and temperature.</p>
+    <p>This app uses the <a href="http://openweathermap.org/api" target="_blank">Open Weather Map API</a> to fetch the weather information of a city entered by the user and displays the description and temperature.</p>
     <p>The course project only uses the Description, but I included the temperature as an extra, as well as some improvements on the layout.</p>
     
 </ul>
