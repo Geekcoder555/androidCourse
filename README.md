@@ -12,4 +12,7 @@ https://www.udemy.com/the-complete-android-developer-course/learn/#/
   <li><h4>Guess the Celebrity</h4></li>
     <p>Sort of a quiz App in which the player names the celebrity on the Image.</p>
     <p>Involved some more advanced topics such as fetching data from a website to populate the Lists with the names and images of the Celebrities and handling exceptions.</p>
+  <li><h4>Whats the Weather</h4></li>
+    <p>This app uses the <a href="http://openweathermap.org/api">Open Weather Map API</a> to fetch the weather information of a city entered by the user and displays the description and temperature.</p>
+    <p>The course project only uses the Description, but I included the temperature as an extra, as well as some improvements on the layout.</p>
 </ul>
