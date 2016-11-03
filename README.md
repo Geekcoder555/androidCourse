@@ -27,3 +27,6 @@ https://www.udemy.com/the-complete-android-developer-course/learn/#/</h2>
   <li><h4>RetrofitTutorial</h4></li>
     <p>Retrofit2 and GSON to consume APIs, <a href='https://www.youtube.com/watch?v=nFIvV5_QTOE'>following this tutorial (in Portuguese):</a></p>
 </ul>
+
+<h2>Udacity projects</h2>
+  <li><h4>SunshineApp</h4></li>
