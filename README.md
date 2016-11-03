@@ -29,4 +29,8 @@ https://www.udemy.com/the-complete-android-developer-course/learn/#/</h2>
 </ul>
 
 <h2>Udacity projects</h2>
-  <li><h4>SunshineApp</h4></li>
+  <ul>
+    <li><h4>SunshineApp</h4></li>
+    <li><h4>ContentProvider Dictionary</h4></li>
+      <p>Tutorial on how to use and build an app that consumes a Content Provider, more info: <a href="https://classroom.udacity.com/courses/ud258">here</a></p>
+  </ul>
