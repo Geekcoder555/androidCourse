@@ -31,6 +31,7 @@ https://www.udemy.com/the-complete-android-developer-course/learn/#/</h2>
 <h2>Udacity projects</h2>
   <ul>
     <li><h4>SunshineApp</h4></li>
+      <p>Tutorial app that includes a lot of concepts, but the most interesting ones are: Content Providers, Databases, JSON API, Custom Adapters, and more.</p>
     <li><h4>ContentProvider Dictionary</h4></li>
       <p>Tutorial on how to use and build an app that consumes a Content Provider, more info: <a href="https://classroom.udacity.com/courses/ud258">here</a></p>
   </ul>
