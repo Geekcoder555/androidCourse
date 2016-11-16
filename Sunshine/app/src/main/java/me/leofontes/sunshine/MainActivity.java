@@ -14,7 +14,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ForecastFragment.Callback{
+    private final String FORECASTFRAGMENT_TAG = "FFTAG";
+    private final String DETAILFRAGMENT_TAG = "DFTAG";
+    Boolean mTwoPane;
+    String mLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mLocation = Utility.getPreferredLocation(this);
+        View weatherDetailContainer = findViewById(R.id.weather_detail_container);
+        if(weatherDetailContainer != null) {
+            mTwoPane = true;
 
+            if(savedInstanceState == null) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.weather_detail_container, new DetailActivityFragment(), DETAILFRAGMENT_TAG).commit();
+            }
+
+        } else {
+            mTwoPane = false;
+        }
+
+        ForecastFragment forecastFragment = ((ForecastFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_forecast));
+        forecastFragment.setUseTodayLayout(!mTwoPane);
     }
 
     @Override
@@ -66,5 +84,50 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.d("LOG_TAG", "Couldn't call " + location + ", no");
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String location = Utility.getPreferredLocation( this );
+        // update the location in our second pane using the fragment manager
+        if (location != null && !location.equals(mLocation)) {
+            ForecastFragment ff = (ForecastFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_forecast);
+
+            if ( null != ff ) {
+                ff.onLocationChanged();
+            }
+            DetailActivityFragment df = (DetailActivityFragment)getSupportFragmentManager().findFragmentByTag(DETAILFRAGMENT_TAG);
+            if ( null != df ) {
+                df.onLocationChanged(location);
+            }
+            mLocation = location;
+        }
+    }
+
+    @Override
+    public void onItemSelected(Uri dateUri) {
+        if(mTwoPane) {
+            Bundle args = new Bundle();
+            args.putParcelable(DetailActivityFragment.DETAIL_URI, dateUri);
+
+            Log.i(DETAILFRAGMENT_TAG, "" + dateUri);
+
+            DetailActivityFragment fragment = new DetailActivityFragment();
+            fragment.setArguments(args);
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.weather_detail_container, fragment, DETAILFRAGMENT_TAG)
+                    .commit();
+        } else {
+            Intent intent = new Intent(this, DetailActivity.class)
+                    .setData(dateUri);
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public Intent getParentActivityIntent() {
+        return super.getParentActivityIntent().addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
     }
 }
