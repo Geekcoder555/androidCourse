@@ -21,18 +21,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detail_day_textview" />
+            android:id="@+id/detail_day_textview"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detail_date_textview" />
+            android:id="@+id/detail_date_textview"
+            android:textSize="16sp"
+            android:textColor="@color/grey_text"
+            android:fontFamily="sans-serif-condensed"/>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -44,12 +51,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/detail_high_textview" />
+                    android:id="@+id/detail_high_textview"
+                    android:textSize="96sp"
+                    android:textColor="@color/black"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/detail_low_textview" />
+                    android:id="@+id/detail_low_textview"
+                    android:textSize="48sp"
+                    android:textColor="@color/grey_text"
+                    android:textAlignment="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -75,16 +88,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detail_humidity_textview" />
+            android:id="@+id/detail_humidity_textview"
+            android:layout_marginBottom="4dp"
+            android:textSize="22sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detail_wind_textview" />
+            android:id="@+id/detail_wind_textview"
+            android:layout_marginBottom="4dp"
+            android:textSize="22sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detail_pressure_textview" />
+            android:id="@+id/detail_pressure_textview"
+            android:textSize="22sp" />
     </LinearLayout>
 </ScrollView>

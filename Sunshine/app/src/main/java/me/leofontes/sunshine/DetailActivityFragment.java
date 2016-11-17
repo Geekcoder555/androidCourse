@@ -75,8 +75,6 @@ public class DetailActivityFragment extends Fragment implements LoaderManager.Lo
 
     Uri mUri;
 
-    int offset;
-
     public DetailActivityFragment() {
         setHasOptionsMenu(true);
     }
